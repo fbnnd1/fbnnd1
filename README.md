@@ -19,7 +19,7 @@ Here are some ideas to get you started:
 
 ## Hello World! I'm fine 😊, and you?
 
-Meu nome Fábio, aprendiz de programação e sempre em busca do próximo nível. 
+Meu nome é Fábio, aprendiz de programação e sempre em busca do próximo nível. 
 
 ### ⚡ Tecnologias
 
