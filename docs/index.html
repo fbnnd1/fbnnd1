@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- External Resources -->
+    <link rel="stylesheet" href="ext-fonts/icofont.min.css" />
+    <!-- Internal Resources -->
+    <link rel="stylesheet" href="style.css">
+    <script src="projects.js"></script>
+    <script src="script.js"></script>
+    <title>Fábio N. N. Dias</title>
+</head>
+<body>
+   <header class="screen">
+       <nav>
+            <ul class="menu-bar">
+                <li><a href="#about-me">Sobre</a></li>
+                <li><a href="#knowledge">Conhecimentos</a></li>
+                <li><a href="#experiences">Experiências</a></li>
+                <li><a href="#projects">Projetos</a></li>
+            </ul>
+            <button data-menu-active="false" onclick="toggleMenu(true)" id="menu-button">
+                <hr />
+                <hr />
+                <hr />
+            </button>
+            <ul class="button-menu-bar">
+                <li><a href="#about-me" onclick="toggleMenu(false)">Sobre</a></li>
+                <li><a href="#knowledge" onclick="toggleMenu(false)">Conhecimentos</a></li>
+                <li><a href="#experiences" onclick="toggleMenu(false)">Experiências</a></li>
+                <li><a href="#projects" onclick="toggleMenu(false)">Projetos</a></li>
+            </ul>
+       </nav>
+       <div class="card-name">
+           <h2>Fábio N. N. Dias</h2>
+           <h1>Desenvolvedor Jr.</h1>
+           <div class="card-name-wrapper-buttons">
+               <a href="http://github.com/fbnnd1/" target="_blank">
+                    <i class="icofont-github" title="Github"></i> 
+                    <span>Github</span>
+                </a>
+               <a href="https://www.linkedin.com/in/f%C3%A1bio-n-5064026a/" target="_blank">
+                    <i class="icofont-linkedin" title="LinkedIn"></i> 
+                    <span>LinkedIn</span>
+                </a>
+           </div>
+       </div>
+   </header>
+   <section id="about-me" class="screen">
+       <h2>Sobre</h2>
+       <div class="about-container">
+           <div class="about-description">
+                <p>Formado em Análise e Desenvolvimento de Sistemas pela Fatec-SP.</p>
+                <p>Tenho experiência na área de Big Data e na construção de aplicações Web.</p>
+                <p>Fico fascinado com as descobertas que podem surgir com a "mineração de dados", assim como transformar ideias em realidade através de linhas de código.</p>
+                <p>Gosto de aprender algo novo sempre que possível.</p>
+           </div>
+           <figure>
+                <img src="imgs/diver-400.png" alt="Imagem mergulhador. Fins apenas ilustrativos" />
+            </figure>
+       </div>
+   </section>
+   <section id="knowledge" class="screen">
+       <h2>Conhecimentos</h2>
+       <p>Tecnologias com maior familiaridade.</p>
+       <div class="container">
+            <ul>
+                <li class="known_techs" id="known-techs-html5">
+                    <span>HTML 5</span>
+                </li>
+                <li class="known_techs" id="known-techs-css3">
+                    <span>CSS 3</span>
+                </li>
+                <li class="known_techs" id="known-techs-js">
+                    <span>JavaScript</span>
+                </li>
+                <li class="known_techs" id="known-techs-reactjs">
+                    <span>ReactJS</span>
+                </li>
+                <li class="known_techs" id="known-techs-bootstrap3">
+                    <span>Bootstrap 3</span>
+                </li>
+                <li class="known_techs" id="known-techs-python">
+                    <span>Python</span>
+                </li>
+                <li class="known_techs" id="known-techs-php">
+                    <span>PHP</span>
+                </li>
+                <li class="known_techs" id="known-techs-mysql">
+                    <span>MySQL</span>
+                </li>
+            </ul>
+       </div>
+   </section>
+   <section id="experiences" class="screen">
+        <h2>Experiências</h2>
+        <section id="experiencie1" class="experiencie">
+            <h3>Keyrus Informática Ltda.</h3>
+            <div class="experience-container">
+                <figure>
+                    <img src="imgs/ExperienceBigData.png" alt="Imagem apenas ilustrativa - Bigdata" />
+                </figure>
+                <div class="experience-description">
+                    <p>Cargo: Estagiário</p>
+                    <p>Departamento: Data Analitics</p>
+                    <p>
+                        Descrição das Atividades:
+                        <ul class="activities-list">
+                            <li>Documentação das tecnologias usadas em projetos;</li>
+                            <li>Auxílio no desenvolvimento de ferramentas;</li>
+                            <li>Projeto de automação com Python.</li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section id="experiencie2" class="experiencie">
+            <h3>DAEE - Departamento de Águas e Energia do Estado</h3>
+            <div class="experience-container">
+                <figure>
+                    <img src="imgs/ExperienceSuporte.png" alt="Imagem apenas ilustrativa - Suporte" />
+                </figure>
+                <div class="experience-description">
+                    <p>Cargo: Estagiário</p>
+                    <p>Departamento: Manutenção e Suporte</p>
+                    <p>
+                        Descrição das Atividades:
+                        <ul class="activities-list">
+                            <li>Atendimento ao usuário final;</li>
+                            <li>Montagem e manutenção de equipamentos de informática;</li>
+                            <li>Controle do estoque de peças;</li>
+                            <li>Registro de chamados.</li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+        </section>
+   </section>
+   <section id="projects" class="screen">
+        <h2>Projetos</h2>
+            <div class="technologies-filter">
+                <button type="button" onclick="scrollFilterOptions(60)">&lt;</button>
+                <div class="filter-list-options">
+                    <button class="active-filter" onclick="filterProjectsTechnology('all')" id="btn_filter_option_all">
+                        Todos
+                    </button>
+                </div>
+                <button type="button" onclick="scrollFilterOptions(-60)">&gt;</button>
+            </div>
+
+            <div class="projects-container">
+
+            </div>
+   </section>
+   <script>
+       renderFilterOptions();
+       renderProjects('all');
+   </script>
+</body>
+</html>

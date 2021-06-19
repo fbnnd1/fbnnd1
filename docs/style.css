@@ -1,0 +1,688 @@
+/* Reset CSS */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+--background-color: #012341;
+--background-shadow-color: #011f3a; 
+--background-shadow-black-color-01: rgba(0,0,0, 0.1);
+--primary-color: #0476D9;
+--text-color: #FFFFFF;
+--secondary-light-color: rgba(255, 255, 255, 0.85);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.screen {
+    width: 100%;
+    height: 100vh;
+}
+
+section.screen  {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+@media (min-width: 600px) {
+    section.screen {
+        padding-top: 4rem;
+        min-height: 100vh;
+        height: auto;
+    }
+}
+
+.screen > h2 {
+    padding-bottom: 1rem;
+}
+
+a, a:hover {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    background-color: var(--background-color);
+}
+
+p {
+    background-color: var(--background-color);
+}
+
+/*desktop navigation menu bar */
+header.screen nav {
+    position: fixed;
+    top:0;
+    width:100%;
+    height: 2rem;
+    background-color: var(--background-shadow-black-color-01);
+
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+}
+
+.menu-bar {
+    display: none;
+}
+
+.menu-bar a, .menu-bar a:hover {
+    color: var(--secondary-light-color);
+}
+
+/*cellphones navigation menu*/
+#menu-button {
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 20%;
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    padding: 5px;
+
+    position: absolute;
+    top: 0.25rem;
+}
+
+#menu-button hr {
+    border: 1px solid var(--primary-color);
+    height: 2px;
+    margin: 2px 0;
+}
+
+.button-menu-bar {
+    display: none;
+    background-color: var(--secondary-light-color);
+    border-bottom-width: 0;
+}
+
+/*cellphones navigation menu (actived)*/
+#menu-button.button-menu-bar-active {
+    background-color: var(--secondary-light-color);
+    border-radius: 20% 20% 0 0;
+    border-width: 0;
+}
+
+.button-menu-bar-active {
+    display: block;
+    text-align: center;
+    gap: 0.5rem;
+
+    position: absolute;
+    top: 1.75rem;
+    width:10rem;
+
+    border-radius: 5px 0 5px 5px;
+}
+
+.button-menu-bar li a {
+    display: inline-block;
+    padding: 0.25rem;
+    font-weight: 600;
+}
+
+@media (min-width: 600px) {
+    header.screen {
+        background-image: url('imgs/background1.png');
+        background-repeat: repeat-x;
+        background-position: top center;
+
+        animation: 3s linear 200ms animation-up-background forwards;
+    }
+
+    header.screen nav {
+        background-color: var(--background-shadow-color);
+    }
+
+    #menu-button, .button-menu-bar {
+        display:none;
+    }
+
+    .menu-bar {
+        display: flex;
+        justify-content: flex-end;
+        gap: 1rem;
+    }
+
+    /*Animations*/
+    @keyframes animation-up-background {
+        0% {
+            background-position: top 20px center;
+        }
+        100% {
+            background-position: top center;
+        }
+    }
+}
+
+/*Initial Screen*/
+.card-name {
+    width: 100%;
+    height: calc(100vh -  2rem);
+    padding: 0 10% 0 10%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.card-name h1 {
+    text-align: center;
+}
+
+.card-name h2 {
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.card-name-wrapper-buttons {
+    margin-top: 0.8rem;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.card-name-wrapper-buttons > a {
+    width: 90%;
+    height: 2rem;
+    border-radius: 10px;
+    font-weight: bold;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+.card-name .card-name-wrapper-buttons a:first-child,
+.card-name .card-name-wrapper-buttons a:first-child:hover {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+.card-name .card-name-wrapper-buttons a:last-child,
+.card-name .card-name-wrapper-buttons a:last-child:hover {
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    background-color: var(--background-color);
+}
+
+@media (min-width: 600px) {
+    .card-name {
+        width: 80vw;
+        justify-content: flex-end;
+        padding-bottom: 6rem;
+        
+        animation: 3s linear 200ms animation-up-card-name forwards;
+    }
+
+    .card-name h1, .card-name h2 {
+        text-align: left;
+        width:100%;
+    }
+
+    .card-name-wrapper-buttons {
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: flex-start;
+    }
+
+    .card-name .card-name-wrapper-buttons a {
+        width: 15.625rem;
+        max-width: 217px;
+    }
+
+    /*Animations*/
+    @keyframes animation-up-card-name {
+        0% {
+            padding-bottom: 2rem;
+        }
+        100% {
+            padding-bottom: 6rem;
+        }
+    }
+}
+
+@media (min-width: 750px) {
+    .card-name h1 {
+        font-size: 2.5rem;
+    }
+    .card-name h2 {
+        font-size: 1.3rem;
+    }
+
+    .card-name-wrapper-buttons > a{
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 800px) {
+    .card-name-wrapper-buttons {
+        justify-content: flex-start;
+    }
+}
+/*About Screen*/
+#about-me {
+    padding-bottom: 10rem;
+}
+
+#about-me .about-container figure {
+    display: none;
+}
+
+#about-me .about-container p {
+    line-height: 1.5rem;
+    margin-top: 1rem;
+}
+
+@media (min-width: 600px) {
+    #about-me {
+        background-image: url('imgs/bubbles1.png');
+        background-repeat: no-repeat;
+        background-position: 100px 100%;
+        height: 100vh;
+        padding-top: 6rem;
+    }
+        
+    #about-me .about-container {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    #about-me .about-container figure {
+        display: block;
+    }
+}
+
+@media (min-width: 740px) {  
+    #about-me > h2 {
+        font-size: 1.5rem;
+    }
+
+    #about-me p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 900px) {  
+    #about-me > h2 {
+        font-size: 2rem;
+    }
+
+    #about-me p {
+        font-size: 1.3rem;
+    }
+}
+
+/*Knowledge Screen*/
+#knowledge {
+    min-height: 100vh;
+    height: auto;
+    padding-bottom: 2rem;
+}
+
+#knowledge p {
+    padding: 1rem 0;
+}
+
+#knowledge .container ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.known_techs {
+    height: 150px;
+    width: 130px;
+    margin-top: 0.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+
+    background-image: url('imgs/technologies.png');
+    background-repeat: no-repeat;
+    background-attachment: local;
+    background-size: 150 150;
+}
+
+#known-techs-html5 {
+    background-position: left -295px top -190px ;
+}
+
+#known-techs-css3 {
+    background-position: left -595px top -190px ;
+}
+
+#known-techs-js {
+    background-position: left -873px top -180px ;
+}
+
+#known-techs-reactjs {
+    background-position: left 0px top -768px ;
+}
+
+#known-techs-bootstrap3 {
+    background-position: left -876px top 0px; 
+}
+
+#known-techs-python {
+    background-position: left -585px top -587px; 
+}
+
+#known-techs-php {
+    background-position: left -5px top -380px; 
+}
+
+#known-techs-mysql {
+    background-position: left -873px top -770px; 
+}
+
+@media (min-width: 360px) {
+    #knowledge .container ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2px;
+    }
+}
+
+@media (min-width: 580px) {
+    #knowledge p {
+        font-size: 1.2rem;
+    }
+
+    #knowledge .container ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (min-width: 880px) {
+    #knowledge {
+        background-image: url('imgs/bubbles2.png');
+        background-repeat: no-repeat;
+        background-position:bottom right 20px;
+    }
+
+    #knowledge > h2 {
+        font-size: 1.5rem;
+    }
+
+    #knowledge .container ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media (min-width: 900px) {  
+    #knowledge p {
+        font-size: 1.3rem;
+    }
+}
+
+/*Experience Screen*/
+.experiencie, .experiencie h3 {
+    padding: 1rem 0 1rem 0;
+}
+
+.experience-container > figure {
+    display: none;
+}
+
+.experiencie p {
+    line-height: 1.5rem;
+    margin-top: 0.1rem;
+}
+
+.activities-list {
+    list-style:circle;
+}
+
+.activities-list li {
+    margin: 0.3rem 0 0.3rem 1rem;
+}
+
+@media (min-width: 600px) {
+    #experiences {
+        background-image: url('imgs/bubbles3.png');
+        background-repeat: no-repeat;
+        background-position: top center;
+    }
+}
+
+@media (min-width: 900px) {
+    #experiences > h2 {
+        font-size: 2rem;
+    }
+
+    .experience-container {
+        width:100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .experience-container figure {
+        margin: 0 5rem;
+    }
+
+    .experiencie h3 {
+        font-size: 1.5rem;
+    }
+
+    .experience-container > figure {
+        display: block;
+    }
+
+    .experiencie p, .activities-list li  {
+        font-size: 1.3rem;
+    }  
+}
+/*Projects Screen*/
+
+/*Filter*/
+.technologies-filter {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.technologies-filter > button {
+    color: var(--primary-color);
+    width: 30px;
+    height: 30px;
+    background-color: var(--background-color);
+    border-style: none;
+    font-size: 1.5rem;
+    padding: 5px;
+}
+
+.filter-list-options {
+    margin-top: 8px;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 0.5rem;
+}
+
+/*Filter Options Scrollbar*/
+.filter-list-options { /*Firefox*/
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary-color) var(--background-color);
+}
+
+.filter-list-options::-webkit-scrollbar { 
+    height: 5px;
+}
+
+.filter-list-options::-webkit-scrollbar-track { 
+    background-color: var(--background-color);
+}
+
+
+.filter-list-options::-webkit-scrollbar-thumb, .filter-list-options::-webkit-scrollbar-thumb:hover { 
+    background-color: var(--primary-color);
+}
+
+/*Filter Options Choice Buttons*/
+.filter-list-options button{
+    min-width: 120px;
+    width: auto;
+    height: 1.25rem;
+    text-align: center;
+    border: 1px solid var(--primary-color);
+    border-radius:10px;
+    color: var(--primary-color);
+    background-color: var(--background-color);
+    margin: 0 5px 0 5px;
+}
+
+.filter-list-options button.active-filter {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+/*Projects Description*/
+.projects-container {
+    padding-top: 10px;
+}
+
+.project {
+    margin-bottom: 1.8rem;
+    margin-top: 1.25rem;
+}
+
+.project > header > h3 {
+    text-align: center;
+}
+
+.project-details > figure {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin: 10px 0 10px 0;
+}
+
+.project-details > figure > img {
+    border-radius: 10%;
+}
+
+.project-description p {
+    line-height: 1.5rem;
+    margin-top: 0.1rem;
+}
+
+.project-description > ul {
+    margin: 10px 0 10px 0;
+    list-style: disc;
+}
+
+.project-description > ul li {
+    margin: 0.3rem 0 0.3rem 1rem;
+} 
+
+.project-buttons-wrapper {
+    width: 100%;
+}
+
+.github-project-button, .demo-project-button {
+    height: 2rem;
+    border-radius: 10px;
+    font-weight: bold;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--primary-color);
+}
+.github-project-button {
+    color: var(--secondary-light-color);
+}
+
+.github-project-button:hover {
+    color: var(--text-color);
+    filter: brightness(1.15);
+}
+
+.demo-project-button {
+    color: var(--primary-color);
+    margin: 0.5rem 0 0 0;
+}
+
+.demo-project-button:hover {
+    filter: brightness(1.15);
+}
+
+@media (min-width: 600px) {
+    #projects {
+        background-image: url('imgs/bubbles3.png');
+        background-repeat: no-repeat;
+        background-position: top right;
+    }
+
+    #projects h2 {
+        font-size: 1.5rem;
+    }
+
+    #projects p, #projects li {
+        font-size: 1.2rem;
+    }
+
+    .project > header > h3 {
+        padding-bottom: 1.25rem; /*0.625rem;*/
+        font-size: 1.3rem;
+    }
+
+    .project-details {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .project-buttons-wrapper {
+       display: flex;
+       justify-content: flex-start;
+    }
+   
+    .github-project-button, .demo-project-button {
+        width:150px;
+    }
+
+    .demo-project-button {
+        margin: 0 0 0 0.5rem;
+    }
+}
+
+@media (min-width: 900px) {
+    .filter-list-options button {
+        height: 1.6rem;
+        font-size: 1.2rem;
+    }
+
+    .projects-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2px;
+    }
+}
