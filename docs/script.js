@@ -67,8 +67,6 @@ function filterProjectsTechnology(str_technology) {
 
 function renderFilterOptions() {
 
-    getAllTechnologies();
-
     let str_html = "";
     arr_technologies.forEach((element) => {
         const str_id = element.replace(/\s/g, "_" );
