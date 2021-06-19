@@ -137,7 +137,7 @@ header.screen nav {
     header.screen {
         background-image: url('imgs/background1.png');
         background-repeat: repeat-x;
-        background-position: top center;
+        background-position: top 20px center;
 
         animation: 3s linear 200ms animation-up-background forwards;
     }
@@ -228,7 +228,8 @@ header.screen nav {
     .card-name {
         width: 80vw;
         justify-content: flex-end;
-        padding-bottom: 6rem;
+        padding-bottom: 2rem;
+        opacity: 0;
         
         animation: 3s linear 200ms animation-up-card-name forwards;
     }
@@ -253,9 +254,11 @@ header.screen nav {
     @keyframes animation-up-card-name {
         0% {
             padding-bottom: 2rem;
+            opacity: 0;
         }
         100% {
             padding-bottom: 6rem;
+            opacity: 1;
         }
     }
 }
