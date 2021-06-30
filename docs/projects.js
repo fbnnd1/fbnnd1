@@ -1,11 +1,12 @@
 let arr_technologies = [];
 let arr_obj_projects_data = [
     {
-        project:"Imersão Dados 3",
-        description:"Estudo de dados provenientes de pesquisa de fármacos. Projeto resultado da Imersão Dados 3 realizada pela Alura",
-        technologies: ["Python", "Jupyter Notebook", "Pandas", "Scikit-learn"],
-        url: "https://github.com/fbnnd1/alura-imersao-dados3",
-        logo: "imersao-dados.svg"
+        project:"Let me Ask",
+        description:"Plataforma de perguntas e respostas para auxiliar criadores de conteúdo na interação com seus espectadores durante transmissões ao vivo desenvolvida durante a NLW Together",
+        technologies: ["React", "TypeScript", "Sass", "Google Firebase"],
+        url: "https://github.com/fbnnd1/nlw-together-letmeask",
+        url_demo: "https://nlw-together-let-me-ask.web.app/",
+        logo: "letmeask.svg"
     },
     {
         project:"NLW4 - Move It",
@@ -21,6 +22,13 @@ let arr_obj_projects_data = [
         technologies: ["React", "TypeScript", "NextJs"],
         url: "https://github.com/fbnnd1/nlw5-podcastr-next",
         logo: "podcastr.png"
+    },
+    {
+        project:"Imersão Dados 3",
+        description:"Estudo de dados provenientes de pesquisa de fármacos. Projeto resultado da Imersão Dados 3 realizada pela Alura",
+        technologies: ["Python", "Jupyter Notebook", "Pandas", "Scikit-learn"],
+        url: "https://github.com/fbnnd1/alura-imersao-dados3",
+        logo: "imersao-dados.svg"
     },
     {
         project:"Happy",
