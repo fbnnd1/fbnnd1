@@ -38,13 +38,6 @@ let arr_obj_projects_data = [
         logo: "happy.png"
     },
     {
-        project:"Rimor App",
-        description:"Jogo educacional para o ensino sobre lugares históricos",
-        technologies:["Bootstrap 3", "PHP", "JavaScript", "Jquery", "Mysql"],
-        url: "https://github.com/fbnnd1/rimorapp1",
-        logo: "RimorApp.png"
-    },
-    {
         project:"Dev.Finances",
         description:"Gerenciador de finanças simples que auxilia o internauta na administração de seus ganhos e suas despesas",
         technologies: ["HTML", "CSS", "JavaScript"],
